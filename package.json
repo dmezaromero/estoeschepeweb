@@ -1,0 +1,19 @@
+{
+  "name": "estoeschepe",
+  "version": "1.0.0",
+  "description": "Esto es CHEPE, Fotos de San José, Costa Rica.",
+  "author": "Lash Azem",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.0.0"
+  }
+}
