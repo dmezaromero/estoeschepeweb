@@ -5,7 +5,7 @@
         <div class="heading uk-width-1-2@m uk-text-center uk-margin-auto uk-light">
           <h1>{{ home.data.homepage.title}}</h1>
           <p>{{ home.data.homepage.description}}</p>
-          <nuxt-link to="https://www.instagram.com/estoeschepe/" class="uk-button uk-button-primary">Ver Más</nuxt-link>
+          <a href="https://www.instagram.com/estoeschepe/" class="uk-button uk-button-primary" target="_blank">Ver Más</a>
         </div>
       </div>
       <backgroundimages v-bind:images="home.data.homepage.background_images"></backgroundimages>
