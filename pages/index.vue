@@ -51,16 +51,18 @@ export default {
     };
   },
   mounted(){
-            // Preload  images
+        // Preload  images
+        if (process.client) {
         preloadImages('.grid__item-img, .bigimg').then(() => {
-            // Remove loader (loading class)
-            //document.body.classList.remove('loading');
+        // Remove loader (loading class)
+          document.body.classList.remove('loading');
             
-            // Initialize grid
+        // Initialize grid
             const grid = new Grid(document.querySelector('.grid'));
         });
 
         const cursor = new Cursor(document.querySelector('.cursor'));
+        }
   },
   head() {
     return {

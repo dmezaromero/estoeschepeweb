@@ -1,7 +1,6 @@
 import { gsap } from 'gsap';
 import { map, lerp, getMousePos, calcWinsize, getRandomNumber } from '../utils';
 
-if (process.client) {
 // Calculate the viewport size
 let winsize = calcWinsize();
 window.addEventListener('resize', () => winsize = calcWinsize());
@@ -10,10 +9,6 @@ window.addEventListener('resize', () => winsize = calcWinsize());
 // Track the mouse position
 let mousepos = {x: winsize.width/2, y: winsize.height/2};
 window.addEventListener('mousemove', ev => mousepos = getMousePos(ev));
-
-}else{
-    //nothing
-}
 
 class GridItem {
     constructor(el) {

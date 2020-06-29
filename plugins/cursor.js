@@ -2,12 +2,8 @@ import { gsap } from 'gsap';
 import { lerp, getMousePos } from './utils';
 
 // Track the mouse position
-if (process.client) {
 let mouse = {x: 0, y: 0};
 window.addEventListener('mousemove', ev => mouse = getMousePos(ev)); 
-}else{
-    //nothing
-}
 
 export default class Cursor {
     constructor(el) {
