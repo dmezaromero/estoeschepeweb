@@ -2,7 +2,7 @@
           <div class="background-images">
         <div class="grid" >
                 <div :class="'grid__item pos-' + index" v-for="(image, index) in images" v-bind:key="image.id">
-                    <div class="grid__item-img" :data-src="image.url" uk-img>
+                    <div class="grid__item-img" :style="'background-image:url('+image.url+');'">
                     </div>
                 </div>
         </div>
@@ -16,15 +16,6 @@ export default {
 }
 </script>
 <style>
-.container{
-    /* display: flex;
-    flex-direction: column;
-    width: 100vw;
-    position: relative;
-    align-items: center;
-    justify-content: center; */
-    background-color: black;
-}
 .grid {
 	pointer-events: none;
 	position: absolute;
