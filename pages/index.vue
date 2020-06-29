@@ -1,21 +1,26 @@
 <template>
-  <div class="container">
-    <div class="uk-position-relative uk-background-muted" uk-height-viewport="offset-top: true; min-height: 600">
+  <div>
+    <div class="container uk-position-relative uk-background-muted" uk-height-viewport="offset-top: true; min-height: 600">
       <div class="uk-position-center">
-        <div class="uk-width-1-2@m uk-text-center uk-margin-auto">
+        <div class="heading uk-width-1-2@m uk-text-center uk-margin-auto uk-light">
           <h1>{{ home.data.homepage.title}}</h1>
           <p>{{ home.data.homepage.description}}</p>
+          <nuxt-link to="gallery" class="uk-button uk-button-primary">Ver Más</nuxt-link>
         </div>
       </div>
+      <backgroundimages v-bind:images="home.data.homepage.background_images"></backgroundimages>
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import backgroundimages from "~/components/background-images"
 
 export default {
-  components: {},
+  components: {
+    backgroundimages
+  },
   async asyncData() {
     const { data } = await axios.post(
       "https://api-us-east-1.graphcms.com/v2/ck8xhe6lm1tn201xp4dbaf2sb/master",
@@ -35,7 +40,16 @@ export default {
                 }`
       }
     );
-    return { home: data };
+    return { 
+      home: data
+    };
   }
 };
 </script>
+<style>
+.heading
+  h1{
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+</style>
