@@ -19,9 +19,6 @@
 <script>
 import axios from "axios";
 import backgroundimages from "~/components/background-images";
-import Cursor from '~/plugins/cursor';
-import Grid from '~/plugins/demo1/grid';
-import { preloadImages } from '~/plugins/utils';
 
 export default {
   components: {
@@ -49,20 +46,6 @@ export default {
     return { 
       home: data
     };
-  },
-  mounted(){
-        // Preload  images
-        if (process.client) {
-        preloadImages('.grid__item-img, .bigimg').then(() => {
-        // Remove loader (loading class)
-          document.body.classList.remove('loading');
-            
-        // Initialize grid
-            const grid = new Grid(document.querySelector('.grid'));
-        });
-
-        const cursor = new Cursor(document.querySelector('.cursor'));
-        }
   },
   head() {
     return {

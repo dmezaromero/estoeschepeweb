@@ -29,7 +29,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/uikit.js', ssr: false }
+    { src: '~/plugins/uikit.js', mode: 'client' },
   ],
   /*
   ** Nuxt.js dev-modules

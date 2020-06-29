@@ -9,10 +9,14 @@
     </div>
 </template>
 <script>
+if (process.client) {
+	require('~/plugins/demo1/index.js')
+}
+
 export default {
     props:{
         images: Array
-    }
+	}
 }
 </script>
 <style>
