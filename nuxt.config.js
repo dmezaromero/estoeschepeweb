@@ -12,7 +12,8 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css' }
     ]
   },
   /*
@@ -23,7 +24,8 @@ export default {
   ** Global CSS
   */
   css: [
-    'uikit/dist/css/uikit.css'
+    'uikit/dist/css/uikit.css',
+    '~/assets/css/main.css'
   ],
   /*
   ** Plugins to load before mounting the App
