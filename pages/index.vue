@@ -54,7 +54,7 @@ export default {
         { hid: 'description', name: 'description', content: 'Hacer el retrato de una ciudad es el trabajo de una vida y ninguna foto es suficiente, porque la ciudad está cambiando siempre.' }
       ],
       bodyAttrs: {
-        class: 'home',
+        class: 'home loading',
       }
     }
   }
