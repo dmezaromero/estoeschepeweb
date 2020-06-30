@@ -32,6 +32,7 @@ export default {
   */
   plugins: [
     { src: '~/plugins/uikit.js', mode: 'client' },
+    { src: '~plugins/ga.js', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
